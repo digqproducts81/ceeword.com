@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Ceeword AI Studio | Premium AI Legal Document Generation</title>
+    <meta name="description" content="Ceeword AI Studio is the premier AI-driven document generation tool for lawyers and legal professionals. Simply provide a prompt, and our AI drafts precise, professional legal documents instantly.">
+    <meta name="keywords" content="AI legal document generator, lawyer AI tool, legal drafting AI, Ceeword, prompt to legal document, AI for law firms">
+    <meta name="author" content="Ceeword AI Studio">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://ceeword.com/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ceeword.com/">
+    <meta property="og:title" content="Ceeword AI Studio | Premium AI Legal Document Generation">
+    <meta property="og:description" content="Transform simple prompts into professional legal documents instantly. Built for modern lawyers.">
+    <meta property="og:image" content="https://ceewordcom.vercel.app/fevi.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ceeword.com/">
+    <meta property="twitter:title" content="Ceeword AI Studio | Premium AI Legal Document Generation">
+    <meta property="twitter:description" content="Transform simple prompts into professional legal documents instantly. Built for modern lawyers.">
+    <meta property="twitter:image" content="https://ceewordcom.vercel.app/fevi.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://ceewordcom.vercel.app/fevi.jpg">
+    <link rel="apple-touch-icon" href="https://ceewordcom.vercel.app/fevi.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Ceeword AI Studio",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "AI-powered document generation tool for lawyers. Prompt-driven legal document drafting.",
+      "url": "https://ceeword.com/",
+      "image": "https://ceewordcom.vercel.app/fevi.jpg"
+    }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #050505;
+            --bg-tertiary: #0a0a0a;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+            --text-tertiary: #666666;
+            --accent: #ffffff;
+            --border: #1a1a1a;
+            --border-light: #2a2a2a;
+            --gradient-1: linear-gradient(135deg, #ffffff 0%, #888888 100%);
+            --gradient-2: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+            --shadow-md: 0 8px 32px rgba(0,0,0,0.6);
+            --shadow-lg: 0 20px 60px rgba(0,0,0,0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+        /* Sticky Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border);
+            padding: 1.25rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-container img {
+            height: 42px;
+            width: 42px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            font-family: 'Playfair Display', serif;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        nav a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--text-primary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 2.5rem;
+            right: 2.5rem;
+            z-index: 999;
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            padding: 1.1rem 2.5rem;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .sticky-cta:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 50px rgba(255, 255, 255, 0.25);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10rem 5% 6rem;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 50%);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border-light);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 6.5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 3rem;
+            font-weight: 400;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-btn {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            padding: 1.25rem 3rem;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Physics Parallax Section */
+        .physics-section {
+            position: relative;
+            min-height: 150vh;
+            background: var(--bg-secondary);
+            overflow: hidden;
+            padding: 8rem 5%;
+        }
+
+        .physics-header {
+            text-align: center;
+            margin-bottom: 6rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .physics-header h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.5s forwards;
+        }
+
+        .physics-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.7s forwards;
+        }
+
+        .falling-documents {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 800px;
+        }
+
+        .falling-doc {
+            position: absolute;
+            background: var(--text-primary);
+            border-radius: 4px;
+            box-shadow: var(--shadow-lg);
+            padding: 2rem;
+            color: var(--bg-primary);
+            opacity: 0;
+            transform: translateY(-100vh) rotate(0deg);
+            animation: fallDown 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        .falling-doc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #000 0%, #333 50%, #000 100%);
+        }
+
+        .doc-content-line {
+            height: 6px;
+            background: #e0e0e0;
+            margin-bottom: 10px;
+            border-radius: 3px;
+        }
+
+        .doc-stamp {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-12deg);
+            border: 2px solid #333;
+            color: #333;
+            padding: 0.4rem 1rem;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.4;
+        }
+
+        .doc-1 {
+            width: 320px;
+            height: 420px;
+            left: 5%;
+            top: 10%;
+            animation-delay: 0.5s;
+        }
+
+        .doc-2 {
+            width: 360px;
+            height: 460px;
+            right: 8%;
+            top: 15%;
+            animation-delay: 1s;
+        }
+
+        .doc-3 {
+            width: 300px;
+            height: 400px;
+            left: 15%;
+            bottom: 10%;
+            animation-delay: 1.5s;
+        }
+
+        .doc-4 {
+            width: 340px;
+            height: 440px;
+            right: 15%;
+            bottom: 5%;
+            animation-delay: 2s;
+        }
+
+        /* Custom CSS Icons */
+        .icon-wrapper {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+        }
+
+        /* Contract Icon */
+        .icon-contract {
+            width: 28px;
+            height: 28px;
+            position: relative;
+        }
+        .icon-contract::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            border: 2px solid var(--text-primary);
+            border-radius: 3px;
+        }
+        .icon-contract::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 2px;
+            background: var(--text-primary);
+        }
+
+        /* Shield Icon */
+        .icon-shield {
+            width: 28px;
+            height: 32px;
+            border: 2px solid var(--text-primary);
+            border-radius: 4px 4px 12px 12px;
+            position: relative;
+        }
+        .icon-shield::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 12px;
+            border: 2px solid var(--text-primary);
+            border-radius: 50%;
+        }
+
+        /* Folder Icon */
+        .icon-folder {
+            width: 32px;
+            height: 26px;
+            position: relative;
+        }
+        .icon-folder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--text-primary);
+            border-radius: 2px 2px 0 0;
+        }
+        .icon-folder::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            border: 2px solid var(--text-primary);
+            border-top: none;
+            border-radius: 0 0 3px 3px;
+        }
+
+        /* Document Icon */
+        .icon-document {
+            width: 24px;
+            height: 30px;
+            border: 2px solid var(--text-primary);
+            border-radius: 2px;
+            position: relative;
+        }
+        .icon-document::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 4px;
+            right: 4px;
+            height: 2px;
+            background: var(--text-primary);
+        }
+        .icon-document::after {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 4px;
+            right: 4px;
+            height: 2px;
+            background: var(--text-primary);
+        }
+
+        /* Workflows Section */
+        .workflows {
+            padding: 8rem 5%;
+            background: var(--bg-primary);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .workflow-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .workflow-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .workflow-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .workflow-card:hover::before {
+            opacity: 1;
+        }
+
+        .workflow-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--border-light);
+            box-shadow: var(--shadow-md);
+        }
+
+        .workflow-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        .workflow-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .workflow-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 1px solid var(--border-light);
+            color: var(--text-primary);
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .workflow-btn:hover {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            border-color: var(--text-primary);
+        }
+
+        .workflow-btn::after {
+            content: '→';
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .workflow-card:hover .workflow-btn::after {
+            transform: translateX(4px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 5rem 5% 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-col h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.875rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .footer-col ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--text-primary);
+            transition: width 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-col ul li a:hover::after {
+            width: 100%;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fallDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-100vh) rotate(-15deg);
+            }
+            60% {
+                opacity: 1;
+                transform: translateY(20px) rotate(5deg);
+            }
+            80% {
+                transform: translateY(-10px) rotate(-3deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .falling-doc {
+                opacity: 0.3;
+            }
+            .sticky-cta {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                padding: 1rem 2rem;
+                font-size: 0.8rem;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="https://ceewordcom.vercel.app/fevi.jpg" alt="Ceeword AI Studio Logo">
+            <span class="logo-text">ceeword</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#workflows">Workflows</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#terms">Terms & Conditions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sticky CTA -->
+    <button class="sticky-cta" onclick="document.getElementById('workflows').scrollIntoView({behavior: 'smooth'})">
+        Draft Document
+    </button>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-badge">
+            <span>✦</span>
+            <span>AI-Powered Legal Intelligence</span>
+        </div>
+        <h1>Legal Documentation,<br>Reimagined.</h1>
+        <p>Ceeword AI Studio transforms simple prompts into precise, court-ready legal documents. Built exclusively for lawyers who demand excellence.</p>
+        <button class="hero-btn" onclick="document.getElementById('workflows').scrollIntoView({behavior: 'smooth'})">Explore Workflows</button>
+    </section>
+
+    <!-- Physics Parallax Section -->
+    <section class="physics-section">
+        <div class="physics-header">
+            <h2>From Prompt to Precision</h2>
+            <p>Watch as AI crafts your legal documents with unprecedented accuracy and speed.</p>
+        </div>
+        
+        <div class="falling-documents">
+            <div class="falling-doc doc-1">
+                <div class="doc-stamp">Confidential</div>
+                <div class="doc-content-line" style="width: 80%;"></div>
+                <div class="doc-content-line" style="width: 60%;"></div>
+                <div class="doc-content-line" style="width: 90%;"></div>
+                <div class="doc-content-line" style="width: 70%;"></div>
+                <div class="doc-content-line" style="width: 85%;"></div>
+                <div class="doc-content-line" style="width: 65%;"></div>
+                <div class="doc-content-line" style="width: 95%;"></div>
+                <div class="doc-content-line" style="width: 75%;"></div>
+            </div>
+            
+            <div class="falling-doc doc-2">
+                <div class="doc-stamp">Draft</div>
+                <div class="doc-content-line" style="width: 70%;"></div>
+                <div class="doc-content-line" style="width: 85%;"></div>
+                <div class="doc-content-line" style="width: 60%;"></div>
+                <div class="doc-content-line" style="width: 90%;"></div>
+                <div class="doc-content-line" style="width: 75%;"></div>
+                <div class="doc-content-line" style="width: 80%;"></div>
+                <div class="doc-content-line" style="width: 65%;"></div>
+            </div>
+            
+            <div class="falling-doc doc-3">
+                <div class="doc-content-line" style="width: 75%;"></div>
+                <div class="doc-content-line" style="width: 90%;"></div>
+                <div class="doc-content-line" style="width: 65%;"></div>
+                <div class="doc-content-line" style="width: 85%;"></div>
+                <div class="doc-content-line" style="width: 70%;"></div>
+            </div>
+            
+            <div class="falling-doc doc-4">
+                <div class="doc-stamp">Final</div>
+                <div class="doc-content-line" style="width: 85%;"></div>
+                <div class="doc-content-line" style="width: 70%;"></div>
+                <div class="doc-content-line" style="width: 95%;"></div>
+                <div class="doc-content-line" style="width: 60%;"></div>
+                <div class="doc-content-line" style="width: 80%;"></div>
+                <div class="doc-content-line" style="width: 75%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflows -->
+    <section class="workflows" id="workflows">
+        <div class="section-header">
+            <h2>Premium Workflows</h2>
+            <p>Specialized AI-driven processes designed for the modern legal professional.</p>
+        </div>
+        
+        <div class="workflow-grid">
+            <div class="workflow-card">
+                <div class="icon-wrapper">
+                    <div class="icon-contract"></div>
+                </div>
+                <h3>Contract Drafting</h3>
+                <p>Generate comprehensive service agreements, employment contracts, and vendor agreements from bullet points with AI precision.</p>
+                <button class="workflow-btn">Launch</button>
+            </div>
+            
+            <div class="workflow-card">
+                <div class="icon-wrapper">
+                    <div class="icon-shield"></div>
+                </div>
+                <h3>NDA Generator</h3>
+                <p>Create mutual or unilateral Non-Disclosure Agreements tailored to your jurisdiction in seconds, not hours.</p>
+                <button class="workflow-btn">Launch</button>
+            </div>
+            
+            <div class="workflow-card">
+                <div class="icon-wrapper">
+                    <div class="icon-folder"></div>
+                </div>
+                <h3>Case File Analysis</h3>
+                <p>Paste raw discovery notes or transcripts. AI extracts key dates, parties, and actionable legal insights instantly.</p>
+                <button class="workflow-btn">Launch</button>
+            </div>
+            
+            <div class="workflow-card">
+                <div class="icon-wrapper">
+                    <div class="icon-document"></div>
+                </div>
+                <h3>Client Intake</h3>
+                <p>Automatically generate customized, practice-area-specific intake questionnaires for new clients with intelligent fields.</p>
+                <button class="workflow-btn">Launch</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo-container" style="margin-bottom: 1.5rem;">
+                    <img src="https://ceewordcom.vercel.app/fevi.jpg" alt="Ceeword Logo" style="height: 36px; width: 36px;">
+                    <span class="logo-text" style="font-size: 1.3rem;">ceeword</span>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; max-width: 300px;">
+                    Empowering legal professionals with intelligent, prompt-driven document automation. Built for excellence.
+                </p>
+            </div>
+            
+            <div class="footer-col" id="pricing">
+                <h4>Pricing</h4>
+                <ul>
+                    <li><a href="#">Solo Practitioner</a></li>
+                    <li><a href="#">Small Firm</a></li>
+                    <li><a href="#">Enterprise</a></li>
+                    <li><a href="#">Custom Solutions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col" id="about">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col" id="terms">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Data Processing</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ceeword AI Studio. All rights reserved. Crafted for the modern legal professional.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for workflow cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.workflow-card').forEach((card) => {
+            observer.observe(card);
+        });
+
+        // Smooth parallax on scroll for documents
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.falling-doc');
+            
+            parallaxElements.forEach((el, index) => {
+                const speed = 0.5 + (index * 0.1);
+                el.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.7)';
+            }
+        });
+    </script>
+</body>
+</html>
