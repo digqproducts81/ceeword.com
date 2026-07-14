@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Get Started | CEEWORD AI STUDIO</title>
+    <meta name="title" content="Get Started | CEEWORD AI STUDIO">
+    <meta name="description" content="Request early access to CEEWORD AI STUDIO. Invite-only platform for legal professionals, firms, and organizations.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://ceeword.com/getstarted.html">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" href="https://ceewordcom.vercel.app/fevi.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="https://ceewordcom.vercel.app/fevi.jpg">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ceeword.com/getstarted.html">
+    <meta property="og:title" content="Get Started | CEEWORD AI STUDIO">
+    <meta property="og:description" content="Request early access to the premier AI-powered legal document intelligence platform.">
+    <meta property="og:image" content="https://ceewordcom.vercel.app/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ceeword.com/getstarted.html">
+    <meta property="twitter:title" content="Get Started | CEEWORD AI STUDIO">
+    <meta property="twitter:description" content="Request early access to the premier AI-powered legal document intelligence platform.">
+    <meta property="twitter:image" content="https://ceewordcom.vercel.app/og-image.jpg">
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Animation -->
+    <div class="floating-bg"></div>
+
+    <!-- Mandatory Modal -->
+    <div class="modal-overlay" id="termsModal" aria-modal="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-content reveal">
+            <h2 id="modal-title" class="modal-title">Before continuing</h2>
+            <p class="modal-text">To continue with your application, you must acknowledge that you have read and accepted our Terms & Conditions and Privacy Policy.</p>
+            
+            <label class="checkbox-container">
+                <input type="checkbox" id="termsCheckbox">
+                <span class="checkmark"></span>
+                <span class="checkbox-label">I have read and accept the <a href="index.html#disclaimer" class="blue-link">Terms & Conditions</a></span>
+            </label>
+
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                <button class="btn btn-primary" id="continueBtn" disabled>Continue</button>
+            </div
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="page-container">
+        
+        <!-- Left Column: Forms -->
+        <main class="main-content">
+            <header class="page-header reveal">
+                <span class="label">Early Access</span>
+                <h1>Request Early Access</h1>
+                <p>CEEWORD AI STUDIO currently operates as an invite-only platform. Applications are reviewed manually to ensure the platform is used responsibly by legal professionals, firms and organizations.</p>
+                <p class="subtle-text">Most applications receive a response within approximately seven business days.</p>
+            </header>
+
+            <!-- Application Form -->
+            <section class="form-card reveal delay-100" id="applicationFormSection">
+                <h2>Application Form</h2>
+                <form id="applicationForm" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country <span class="required">*</span></label>
+                            <input type="text" id="country" name="country" required autocomplete="country">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number <span class="required">*</span></label>
+                            <input type="tel" id="mobile" name="mobile" required autocomplete="tel">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="profession">Profession <span class="required">*</span></label>
+                            <select id="profession" name="profession" required>
+                                <option value="" disabled selected>Select your profession</option>
+                                <option value="lawyer">Lawyer</option>
+                                <option value="advocate">Advocate</option>
+                                <option value="legal_firm">Legal Firm</option>
+                                <option value="corporate_counsel">Corporate Counsel</option>
+                                <option value="law_student">Law Student</option>
+                                <option value="paralegal">Paralegal</option>
+                                <option value="legal_researcher">Legal Researcher</option>
+                                <option value="business_owner">Business Owner</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="hearAbout">How did you hear about CEEWORD AI STUDIO? <span class="optional">(Optional)</span></label>
+                            <input type="text" id="hearAbout" name="hearAbout" autocomplete="off">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="additionalInfo">Anything else you would like us to know? <span class="optional">(Optional)</span></label>
+                            <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <label class="checkbox-container mt-4">
+                        <input type="checkbox" id="accuracyCheckbox" required>
+                        <span class="checkmark"></span>
+                        <span class="checkbox-label">I confirm that the information provided is accurate. <span class="required">*</span></span>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary btn-large mt-4" id="submitAppBtn">
+                        <span class="btn-text">Submit Application</span>
+                        <span class="btn-loader" hidden></span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Status Checker -->
+            <section class="form-card reveal delay-200" id="statusCheckerSection">
+                <div class="divider"><span>Already Applied?</span></div>
+                <h2>Check Application Status</h2>
+                <form id="statusForm">
+                    <div class="form-group">
+                        <label for="appCode">Application Code</label>
+                        <input type="text" id="appCode" name="appCode" placeholder="CW-XXXXXX" pattern="CW-[A-Z0-9]+" required>
+                    </div>
+                    <button type="submit" class="btn btn-secondary btn-large" id="checkStatusBtn">
+                        <span class="btn-text">Check Status</span>
+                        <span class="btn-loader" hidden></span>
+                    </button>
+                </form>
+
+                <!-- Status Results (Hidden by default) -->
+                <div id="statusResult" class="status-result" hidden>
+                    <!-- Dynamically populated by JS -->
+                </div>
+            </section>
+
+            <!-- Login Section -->
+            <section class="form-card reveal delay-300" id="loginSection">
+                <div class="divider"><span>Already have an account?</span></div>
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" name="loginEmail" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="loginPassword" required autocomplete="current-password">
+                    </div>
+                    <div class="form-row">
+                        <label class="checkbox-container">
+                            <input type="checkbox" name="remember">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-label">Remember Me</span>
+                        </label>
+                        <a href="#" class="blue-link subtle">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large mt-4" id="loginBtn">
+                        <span class="btn-text">Login</span>
+                        <span class="btn-loader" hidden></span>
+                    </button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Right Column: Info Panel (Desktop) -->
+        <aside class="info-panel">
+            <div class="sticky-container">
+                <div class="illustration-placeholder reveal">
+                    <div class="abstract-shape"></div>
+                    <div class="abstract-shape shape-2"></div>
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-primary); z-index: 2;">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </div>
+
+                <div class="info-card reveal delay-100">
+                    <h4>Invite-only Platform</h4>
+                    <p>Applications are reviewed manually to ensure quality and security.</p>
+                </div>
+                <div class="info-card reveal delay-200">
+                    <h4>Enterprise Security</h4>
+                    <p>Encrypted document processing with strict data isolation.</p>
+                </div>
+                <div class="info-card reveal delay-300">
+                    <h4>Trusted Legal AI</h4>
+                    <p>Designed specifically for lawyers and legal professionals.</p>
+                </div>
+                <div class="info-card reveal delay-400">
+                    <h4>Professional Support</h4>
+                    <p>Priority onboarding and dedicated support after approval.</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Back to Home</a>
+                <a href="index.html#disclaimer">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Support</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2026 CEEWORD AI STUDIO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>CEEWORD AI STUDIO | AI-Powered Legal Document Intelligence</title>
+    <meta name="title" content="CEEWORD AI STUDIO | AI-Powered Legal Document Intelligence">
+    <meta name="description" content="CEEWORD AI STUDIO is the premium AI platform for lawyers and legal firms. Generate professional, court-ready legal documents from a single prompt in seconds.">
+    <meta name="keywords" content="legal AI, AI document generator, legal tech, contract automation, law firm software, legal drafting AI, CEEWORD">
+    <meta name="author" content="CEEWORD AI STUDIO">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://ceeword.com/">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" href="https://ceewordcom.vercel.app/fevi.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="https://ceewordcom.vercel.app/fevi.jpg">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ceeword.com/">
+    <meta property="og:title" content="CEEWORD AI STUDIO | AI-Powered Legal Document Intelligence">
+    <meta property="og:description" content="One Prompt. Every Legal Document. Professionally Structured. The enterprise AI platform for modern legal teams.">
+    <meta property="og:image" content="https://ceewordcom.vercel.app/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ceeword.com/">
+    <meta property="twitter:title" content="CEEWORD AI STUDIO | AI-Powered Legal Document Intelligence">
+    <meta property="twitter:description" content="One Prompt. Every Legal Document. Professionally Structured.">
+    <meta property="twitter:image" content="https://ceewordcom.vercel.app/og-image.jpg">
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CEEWORD AI STUDIO",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "AI-Powered Legal Document Intelligence platform for lawyers, advocates, and corporate legal departments.",
+      "offers": {
+        "@type": "Offer",
+        "price": "47.00",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1250"
+      }
+    }
+    </script>
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-tertiary: #f3f4f6;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --text-tertiary: #9ca3af;
+            --accent: #000000;
+            --accent-hover: #1f2937;
+            --border: #e5e7eb;
+            --border-light: #f3f4f6;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+            --radius-sm: 0.375rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* =========================================
+           UTILITIES & TYPOGRAPHY
+           ========================================= */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 4rem 0;
+            }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.2;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #111827 0%, #4b5563 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* =========================================
+           ANIMATIONS & REVEAL
+           ========================================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes grid-move {
+            0% { background-position: 0 0; }
+            100% { background-position: 40px 40px; }
+        }
+
+        /* =========================================
+           BUTTONS & INTERACTIONS
+           ========================================= */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 1.75rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-secondary);
+            border-color: var(--text-tertiary);
+        }
+
+        /* Ripple Effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4.5rem;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        @media (min-width: 1024px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            position: relative;
+            padding-top: 8rem;
+            padding-bottom: 6rem;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 0%, #f9fafb 0%, #ffffff 100%);
+        }
+
+        .hero-grid-bg {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: grid-move 20s linear infinite;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .hero p {
+            font-size: clamp(1.125rem, 2vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-xl);
+            backdrop-filter: blur(8px);
+        }
+
+        @media (min-width: 768px) {
+            .hero-stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        /* =========================================
+           CARDS & GRID SYSTEMS
+           ========================================= */
+        .card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            border-color: var(--text-tertiary);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 { grid-template-columns: repeat(2, 1fr); }
+            .grid-3 { grid-template-columns: repeat(2, 1fr); }
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 1024px) {
+            .grid-3 { grid-template-columns: repeat(3, 1fr); }
+            .grid-4 { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        /* =========================================
+           SECTIONS SPECIFIC
+           ========================================= */
+        .problem-icon, .feature-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+        }
+
+        /* Workflow Timeline */
+        .workflow {
+            position: relative;
+        }
+
+        .workflow::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            .workflow::before {
+                left: 2rem;
+            }
+        }
+
+        .workflow-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .workflow-step:nth-child(even) {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .workflow-step, .workflow-step:nth-child(even) {
+                flex-direction: row;
+                text-align: left;
+                padding-left: 5rem;
+            }
+        }
+
+        .workflow-content {
+            width: 45%;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        @media (max-width: 768px) {
+            .workflow-content {
+                width: 100%;
+            }
+        }
+
+        .workflow-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border: 4px solid var(--bg-primary);
+            border-radius: 50%;
+            box-shadow: var(--shadow-md);
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            .workflow-dot {
+                left: 2rem;
+            }
+        }
+
+        /* Pricing */
+        .pricing-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--text-primary);
+            box-shadow: var(--shadow-xl);
+            transform: scale(1.02);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 1rem 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 2rem 0;
+            flex-grow: 1;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+        }
+
+        .feature-list svg {
+            width: 20px;
+            height: 20px;
+            color: var(--text-primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-table th {
+            background: var(--bg-secondary);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .comparison-table td:first-child {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .comparison-table td {
+            color: var(--text-secondary);
+        }
+
+        .check { color: #059669; }
+        .cross { color: #dc2626; }
+
+        /* FAQ Accordion */
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.0625rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--text-secondary);
+        }
+
+        .faq-question svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 4rem 0;
+        }
+
+        .disclaimer-content {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .disclaimer-content h3 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .disclaimer-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .disclaimer-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-primary);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            font-size: 0.9375rem;
+        }
+
+        .footer-links h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 4.5rem;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-primary);
+            padding: 2rem;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem 0;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="#" class="logo">CEEWORD AI STUDIO</a>
+            
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#disclaimer">Terms</a></li>
+            </ul>
+
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="getstarted.html" class="btn btn-primary">Get Started</a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#features" onclick="toggleMobileMenu()">Features</a>
+        <a href="#pricing" onclick="toggleMobileMenu()">Pricing</a>
+        <a href="#security" onclick="toggleMobileMenu()">Security</a>
+        <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+        <a href="#disclaimer" onclick="toggleMobileMenu()">Terms</a>
+        <a href="getstarted.html" onclick="toggleMobileMenu()" style="color: var(--accent); font-weight: 600;">Get Started</a>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-grid-bg"></div>
+            <div class="container hero-content">
+                <span class="label reveal">AI-Powered Legal Document Intelligence</span>
+                <h1 class="reveal delay-100">One Prompt.<br>Thousands of Legal Possibilities.</h1>
+                <p class="reveal delay-200">CEEWORD AI STUDIO transforms how legal professionals draft, format, and finalize documents. From complex contracts to court-ready petitions, generate professionally structured legal documents in seconds, not hours.</p>
+                
+                <div class="hero-buttons reveal delay-300">
+                    <a href="getstarted.html" class="btn btn-primary">Get Started</a>
+                    <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                </div>
+
+                <div class="hero-stats reveal delay-300">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Million+ Words Generated</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="120">0</span>
+                        <span class="stat-label">Thousand+ Documents</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="12">0</span>
+                        <span class="stat-label">Seconds Avg. Speed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="850">0</span>
+                        <span class="stat-label">Firms Onboard</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="section-padding" style="background: var(--bg-secondary);" id="problem">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="label">The Problem</span>
+                    <h2>Traditional Legal Drafting is Broken</h2>
+                    <p>Legal professionals waste countless hours on repetitive, manual tasks that detract from high-value strategic work.</p>
+                </div>
+                
+                <div class="grid-3">
+                    <div class="card reveal">
+                        <svg class="problem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <h3>Time Consuming</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem;">Hours spent on manual formatting and repetitive clause insertion instead of legal strategy.</p>
+                    </div>
+                    <div class="card reveal delay-100">
+                        <svg class="problem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        <h3>Expensive Overhead</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem;">High billing hours consumed by administrative document preparation rather than billable advisory work.</p>
+                    </div>
+                    <div class="card reveal delay-200">
+                        <svg class="problem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        <h3>Version Confusion</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem;">Managing multiple template versions, manual research delays, and human repetition errors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="section-padding" id="solution">
+            <div class="container">
+                <div class="grid-2" style="align-items: center; gap: 4rem;">
+                    <div class="reveal">
+                        <span class="label">The Solution</span>
+                        <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem;">Intelligent Drafting.<br>Zero Compromise.</h2>
+                        <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem; line-height: 1.7;">CEEWORD AI STUDIO understands legal context. Provide one detailed prompt, and our AI generates structured, professionally formatted legal drafts ready for your review and instant export.</p>
+                        
+                        <ul style="list-style: none; space-y: 1rem;">
+                            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; color: var(--text-primary);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Deep contextual legal understanding
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; color: var(--text-primary);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Professional typography & legal numbering
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; color: var(--text-primary);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Instant export in multiple formats
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="reveal delay-200" style="background: var(--bg-secondary); border-radius: var(--radius-xl); padding: 3rem; border: 1px solid var(--border); position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: -50%; right: -50%; width: 100%; height: 100%; background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, transparent 70%);"></div>
+                        <div style="background: white; border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-lg); border: 1px solid var(--border); margin-bottom: 1rem;">
+                            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: #10b981;"></div>
+                            </div>
+                            <div style="height: 8px; background: var(--bg-tertiary); border-radius: 4px; width: 60%; margin-bottom: 0.75rem;"></div>
+                            <div style="height: 8px; background: var(--bg-tertiary); border-radius: 4px; width: 80%; margin-bottom: 0.75rem;"></div>
+                            <div style="height: 8px; background: var(--bg-tertiary); border-radius: 4px; width: 40%;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: center;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-tertiary); animation: float 3s ease-in-out infinite;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div style="background: white; border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-lg); border: 1px solid var(--border); margin-top: 1rem;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                <div style="height: 8px; background: var(--text-primary); border-radius: 4px; width: 30%;"></div>
+                                <div style="height: 8px; background: var(--bg-tertiary); border-radius: 4px; width: 20%;"></div>
+                            </div>
+                            <div style="height: 6px; background: var(--bg-tertiary); border-radius: 3px; width: 100%; margin-bottom: 0.5rem;"></div>
+                            <div style="height: 6px; background: var(--bg-tertiary); border-radius: 3px; width: 100%; margin-bottom: 0.5rem;"></div>
+                            <div style="height: 6px; background: var(--bg-tertiary); border-radius: 3px; width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section-padding" style="background: var(--bg-secondary);" id="features">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="label">Capabilities</span>
+                    <h2>Comprehensive Legal Toolkit</h2>
+                    <p>Everything you need to draft, format, and finalize legal documentation at enterprise scale.</p>
+                </div>
+
+                <div class="grid-4">
+                    <!-- Feature Cards -->
+                    <div class="card reveal"><h4 style="margin-bottom: 0.5rem;">AI Contract Generator</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Draft complex agreements with intelligent clause suggestions.</p></div>
+                    <div class="card reveal delay-100"><h4 style="margin-bottom: 0.5rem;">Legal Notice Generator</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Formal notices structured to jurisdictional standards.</p></div>
+                    <div class="card reveal delay-200"><h4 style="margin-bottom: 0.5rem;">Petitions & Affidavits</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Court-ready formatting with proper legal numbering.</p></div>
+                    <div class="card reveal delay-300"><h4 style="margin-bottom: 0.5rem;">NDA & Employment</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Standardized templates with customizable variables.</p></div>
+                    <div class="card reveal"><h4 style="margin-bottom: 0.5rem;">Rental Agreements</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Comprehensive property and lease documentation.</p></div>
+                    <div class="card reveal delay-100"><h4 style="margin-bottom: 0.5rem;">Corporate Documents</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Board resolutions, bylaws, and corporate governance.</p></div>
+                    <div class="card reveal delay-200"><h4 style="margin-bottom: 0.5rem;">Compliance Reports</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Structured regulatory and compliance documentation.</p></div>
+                    <div class="card reveal delay-300"><h4 style="margin-bottom: 0.5rem;">Case Summaries</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">AI-distilled briefs from lengthy case files.</p></div>
+                    <div class="card reveal"><h4 style="margin-bottom: 0.5rem;">Legal Research</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Context-aware statutory and case law referencing.</p></div>
+                    <div class="card reveal delay-100"><h4 style="margin-bottom: 0.5rem;">Document Formatter</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Automatic alignment, headers, footers, and margins.</p></div>
+                    <div class="card reveal delay-200"><h4 style="margin-bottom: 0.5rem;">AI Citation Assistant</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Bluebook and jurisdiction-specific citation formatting.</p></div>
+                    <div class="card reveal delay-300"><h4 style="margin-bottom: 0.5rem;">Legal Letter Generator</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Professional correspondence with firm branding.</p></div>
+                    <div class="card reveal"><h4 style="margin-bottom: 0.5rem;">Court Draft Assistant</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Pleadings and motions formatted for court submission.</p></div>
+                    <div class="card reveal delay-100"><h4 style="margin-bottom: 0.5rem;">Export Engine</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">PDF, DOCX, TXT, Markdown, JPG, PNG outputs.</p></div>
+                    <div class="card reveal delay-200"><h4 style="margin-bottom: 0.5rem;">Version History</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Track changes and revert to previous drafts instantly.</p></div>
+                    <div class="card reveal delay-300"><h4 style="margin-bottom: 0.5rem;">Cloud Storage</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Encrypted, secure document repository.</p></div>
+                    <div class="card reveal"><h4 style="margin-bottom: 0.5rem;">Document Templates</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Library of pre-vetted, professional legal structures.</p></div>
+                    <div class="card reveal delay-100"><h4 style="margin-bottom: 0.5rem;">AI Smart Suggestions</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Proactive recommendations for missing clauses.</p></div>
+                    <div class="card reveal delay-200"><h4 style="margin-bottom: 0.5rem;">Client-Ready Versions</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Clean, annotated drafts for client review.</p></div>
+                    <div class="card reveal delay-300"><h4 style="margin-bottom: 0.5rem;">Printable Versions</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">Optimized layouts for physical court filings.</p></div>
+                    <div class="card reveal"><h4 style="margin-bottom: 0.5rem;">Professional Layouts</h4><p style="font-size: 0.875rem; color: var(--text-secondary);">World-class typography and structural integrity.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workflow Section -->
+        <section class="section-padding" id="workflow">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="label">Workflow</span>
+                    <h2>From Prompt to Final Draft in Minutes</h2>
+                </div>
+
+                <div class="workflow">
+                    <div class="workflow-step reveal">
+                        <div class="workflow-content">
+                            <span class="label">Step 1</span>
+                            <h3>Describe Your Case</h3>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">Input your requirements, jurisdiction, and specific clauses needed in natural language.</p>
+                        </div>
+                        <div class="workflow-dot"></div>
+                    </div>
+                    <div class="workflow-step reveal">
+                        <div class="workflow-content">
+                            <span class="label">Step 2</span>
+                            <h3>AI Analyzes Context</h3>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">Our engine parses legal requirements, identifying necessary structures and potential risks.</p>
+                        </div>
+                        <div class="workflow-dot"></div>
+                    </div>
+                    <div class="workflow-step reveal">
+                        <div class="workflow-content">
+                            <span class="label">Step 3</span>
+                            <h3>AI Structures Document</h3>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">Automatic application of professional legal numbering, headers, and logical flow.</p>
+                        </div>
+                        <div class="workflow-dot"></div>
+                    </div>
+                    <div class="workflow-step reveal">
+                        <div class="workflow-content">
+                            <span class="label">Step 4</span>
+                            <h3>Generate Document</h3>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">High-fidelity draft produced in seconds with precise legal terminology.</p>
+                        </div>
+                        <div class="workflow-dot"></div>
+                    </div>
+                    <div class="workflow-step reveal">
+                        <div class="workflow-content">
+                            <span class="label">Step 5</span>
+                            <h3>Review & Refine</h3>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">Edit inline or request AI adjustments to specific sections instantly.</p>
+                        </div>
+                        <div class="workflow-dot"></div>
+                    </div>
+                    <div class="workflow-step reveal">
+                        <div class="workflow-content">
+                            <span class="label">Step 6</span>
+                            <h3>Export & Finalize</h3>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">Download in PDF, DOCX, or print-ready formats, fully formatted and client-ready.</p>
+                        </div>
+                        <div class="workflow-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="section-padding" style="background: var(--bg-secondary);" id="pricing">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="label">Pricing</span>
+                    <h2>Transparent, Enterprise-Grade Pricing</h2>
+                    <p>Scale your legal operations without unpredictable costs.</p>
+                </div>
+
+                <div class="grid-3">
+                    <!-- Starter -->
+                    <div class="card pricing-card reveal">
+                        <h3>Starter</h3>
+                        <div class="price">$47<span>/month</span></div>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem;">For solo practitioners and small teams.</p>
+                        <ul class="feature-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 310 document generations monthly</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Standard AI processing</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Standard formatting</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Email support</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Basic exports (PDF, DOCX, TXT, JPG, PNG)</li>
+                        </ul>
+                        <a href="getstarted.html" class="btn btn-secondary" style="width: 100%;">Get Started</a>
+                    </div>
+
+                    <!-- Professional -->
+                    <div class="card pricing-card featured reveal delay-100">
+                        <div class="pricing-badge">Most Popular</div>
+                        <h3>Professional</h3>
+                        <div class="price">$69<span>/month</span></div>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem;">For growing firms and corporate counsel.</p>
+                        <ul class="feature-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 660 document generations monthly</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority AI queue</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Longer documents & advanced formatting</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Better reasoning capabilities</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority support</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything from Starter</li>
+                        </ul>
+                        <a href="getstarted.html" class="btn btn-primary" style="width: 100%;">Get Started</a>
+                    </div>
+
+                    <!-- Enterprise -->
+                    <div class="card pricing-card reveal delay-200">
+                        <h3>Enterprise</h3>
+                        <div class="price">$129<span>/month</span></div>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem;">For large firms and high-volume departments.</p>
+                        <ul class="feature-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 990 document generations monthly</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Largest context window</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced planning & complex drafting</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Maximum export quality</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated enterprise support</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything included</li>
+                        </ul>
+                        <a href="getstarted.html" class="btn btn-secondary" style="width: 100%;">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section class="section-padding" id="security">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="label">Security</span>
+                    <h2>Enterprise-Grade Protection</h2>
+                    <p>Your client data is protected by industry-leading security standards.</p>
+                </div>
+
+                <div class="grid-4">
+                    <div class="card reveal" style="text-align: center;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 1rem; color: var(--text-primary);"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        <h4>Encrypted Documents</h4>
+                        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.5rem;">AES-256 encryption at rest and in transit.</p>
+                    </div>
+                    <div class="card reveal delay-100" style="text-align: center;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 1rem; color: var(--text-primary);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <h4>Private Sessions</h4>
+                        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.5rem;">Isolated processing environments per user.</p>
+                    </div>
+                    <div class="card reveal delay-200" style="text-align: center;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 1rem; color: var(--text-primary);"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        <h4>Secure Processing</h4>
+                        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.5rem;">SOC 2 Type II compliant infrastructure.</p>
+                    </div>
+                    <div class="card reveal delay-300" style="text-align: center;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 1rem; color: var(--text-primary);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        <h4>Professional Standards</h4>
+                        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.5rem;">Built for attorney-client privilege compliance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us / Comparison -->
+        <section class="section-padding" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="label">Comparison</span>
+                    <h2>Why Choose CEEWORD AI STUDIO</h2>
+                </div>
+
+                <div class="reveal" style="overflow-x: auto;">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Capability</th>
+                                <th>Traditional Legal Drafting</th>
+                                <th>CEEWORD AI STUDIO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Drafting Time</td>
+                                <td><span class="cross">Hours to Days</span></td>
+                                <td><span class="check">Minutes</span></td>
+                            </tr>
+                            <tr>
+                                <td>Assistance</td>
+                                <td><span class="cross">Manual Research</span></td>
+                                <td><span class="check">AI Assistance</span></td>
+                            </tr>
+                            <tr>
+                                <td>Structure</td>
+                                <td><span class="cross">Manual Formatting</span></td>
+                                <td><span class="check">Professional Structure</span></td>
+                            </tr>
+                            <tr>
+                                <td>Export</td>
+                                <td><span class="cross">Copy/Paste Errors</span></td>
+                                <td><span class="check">Instant Multi-Format Export</span></td>
+                            </tr>
+                            <tr>
+                                <td>Version Control</td>
+                                <td><span class="cross">High Confusion</span></td>
+                                <td><span class="check">Automated History</span></td>
+                            </tr>
+                            <tr>
+                                <td>Cost Efficiency</td>
+                                <td><span class="cross">Higher Overhead</span></td>
+                                <td><span class="check">Predictable Pricing</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="label">Testimonials</span>
+                    <h2>Trusted by Legal Professionals</h2>
+                </div>
+
+                <div class="grid-3">
+                    <div class="card reveal">
+                        <div style="display: flex; gap: 0.25rem; margin-bottom: 1rem; color: var(--text-primary);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-style: italic;">"CEEWORD has reduced our contract drafting time by 70%. The formatting is consistently court-ready, and the AI understands complex jurisdictional nuances."</p>
+                        <div>
+                            <div style="font-weight: 600; color: var(--text-primary);">Managing Partner</div>
+                            <div style="font-size: 0.875rem; color: var(--text-tertiary);">Mid-Size Corporate Law Firm</div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal delay-100">
+                        <div style="display: flex; gap: 0.25rem; margin-bottom: 1rem; color: var(--text-primary);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-style: italic;">"As in-house counsel, I need speed without sacrificing accuracy. The export engine and version history features are indispensable for our compliance workflows."</p>
+                        <div>
+                            <div style="font-weight: 600; color: var(--text-primary);">General Counsel</div>
+                            <div style="font-size: 0.875rem; color: var(--text-tertiary);">Technology Corporation</div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal delay-200">
+                        <div style="display: flex; gap: 0.25rem; margin-bottom: 1rem; color: var(--text-primary);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-style: italic;">"The AI citation assistant alone saves me hours per week. It's like having a senior associate available 24/7 to structure my drafts perfectly."</p>
+                        <div>
+                            <div style="font-weight: 600; color: var(--text-primary);">Senior Associate</div>
+                            <div style="font-size: 0.875rem; color: var(--text-tertiary);">Litigation Practice</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section-padding" style="background: var(--bg-secondary);" id="faq">
+            <div class="container" style="max-width: 800px;">
+                <div class="section-header reveal">
+                    <span class="label">FAQ</span>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+
+                <div class="reveal">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Is AI replacing lawyers?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No. CEEWORD AI STUDIO is designed to augment legal professionals, not replace them. It handles repetitive drafting and formatting, allowing lawyers to focus on high-value strategy, client counseling, and complex legal reasoning.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Can I submit AI documents directly to court?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Generated documents are drafts. While they are formatted to court standards, all filings must be reviewed, validated, and approved by a licensed legal professional before submission to ensure jurisdictional compliance.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Can generated documents be edited?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. All exports (especially DOCX and Markdown) are fully editable. You can also request AI adjustments to specific sections before exporting.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Who owns the generated content?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You retain full ownership and copyright of all documents generated through your account. CEEWORD claims no rights to your output.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What file formats are supported?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We support PDF, DOCX, TXT, Markdown, JPG, and PNG. Printable and client-ready versions are optimized for each format.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How secure is my data?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We employ AES-256 encryption at rest and in transit, isolated processing sessions, and strict access controls. We do not train our models on your confidential client data.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What are the monthly document generation limits?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Limits vary by plan: Starter (310), Professional (660), and Enterprise (990) generations per monthly billing cycle.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Can unused generations roll over?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No. Unused document generations do not roll over to the next billing cycle. Limits reset on your monthly renewal date.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How accurate is the AI in legal contexts?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our models are fine-tuned on legal corpora for high structural and terminological accuracy. However, as with all probabilistic AI, human review by a qualified attorney is mandatory before use.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Does CEEWORD store my confidential client data?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Data is processed in secure, ephemeral sessions. You control retention via your dashboard, and we provide tools to permanently delete all associated data upon request.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Can I customize formatting to match my firm's branding?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Professional and Enterprise plans include custom template uploads, allowing you to enforce firm-specific headers, footers, fonts, and spacing.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Is there a free trial available?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We offer a limited free trial for new users to evaluate the platform's capabilities. Contact our sales team for enterprise trial arrangements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How does the AI handle jurisdiction-specific laws?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can specify the jurisdiction in your prompt. The AI will adapt terminology, structure, and statutory references to align with that region's general legal standards, though local verification remains essential.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What happens if the AI generates an incorrect citation?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>AI may occasionally hallucinate citations. This is why our terms require independent verification of all citations, statutes, and regulations by a licensed professional before use.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Can multiple team members collaborate on a single account?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Our Professional and Enterprise plans support multi-user workspaces with role-based access controls and shared template libraries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Disclaimer -->
+        <section class="disclaimer" id="disclaimer">
+            <div class="container">
+                <div class="disclaimer-content reveal">
+                    <h3>Important Legal Disclaimer</h3>
+                    <p>CEEWORD AI STUDIO provides AI-assisted document drafting tools. Outputs are generated using probabilistic artificial intelligence. Generated documents should not be considered legal advice.</p>
+                    
+                    <p style="margin-top: 1rem;">Users remain solely responsible for reviewing, validating, editing, and approving all generated content before professional, legal, regulatory, governmental, judicial, or commercial use. Documents should be reviewed by a licensed legal professional whenever required.</p>
+                    
+                    <p style="margin-top: 1rem;">CEEWORD AI STUDIO makes no guarantees regarding legal validity, jurisdictional compliance, enforceability, completeness, suitability, or accuracy. AI may generate incomplete, outdated, or incorrect information. Users should independently verify statutes, regulations, court rules, legal citations, and jurisdiction-specific requirements.</p>
+                    
+                    <p style="margin-top: 1rem;"><strong>Limitation of Liability:</strong> CEEWORD AI STUDIO shall not be liable for court outcomes, financial loss, professional negligence, missed deadlines, incorrect filings, business interruption, legal disputes, regulatory penalties, indirect damages, loss of data, or loss of profits.</p>
+                    
+                    <p style="margin-top: 1rem;">Users accept full responsibility for the use of generated outputs. Using this platform constitutes acceptance of these terms. The service may improve continuously. Features, limits, and pricing may change without notice. Abuse may result in account suspension. Monthly document limits reset every billing cycle. Unused generations do not roll over.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">CEEWORD AI STUDIO</a>
+                    <p>AI-Powered Legal Document Intelligence for the modern legal professional. Structured, secure, and ready for review.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="getstarted.html">Get Started</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#disclaimer">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 CEEWORD AI STUDIO. All rights reserved.</p>
+                <p>Designed with precision for the legal profession.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Intersection Observer for Scroll Reveals
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        // Animated Counters
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2000;
+                        const step = target / (duration / 16);
+                        let current = 0;
+                        
+                        const updateCounter = () => {
+                            current += step;
+                            if (current < target) {
+                                counter.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target + (target > 100 ? '+' : '');
+                            }
+                        };
+                        updateCounter();
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.hero-stats');
+        if (statsSection) {
+            counterObserver.observe(statsSection);
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all others
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                    faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                
+                // Toggle current
+                if (!isActive) {
+                    item.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Button Ripple Effect
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar Background on Scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.05)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
