@@ -3,119 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Submitted | CEEWORD AI STUDIO</title>
-    <link rel="icon" href="https://ceewordcom.vercel.app/fevi.jpg" type="image/jpeg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+    <!-- SEO & Metadata -->
+    <title>Terms of Service & Privacy Policy | Ceeword AI Studio</title>
+    <meta name="description" content="Terms and Conditions and detailed Privacy Policy for Ceeword AI Studio.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ceeword.com/terms">
+    
+    <!-- Favicon Configuration -->
+    <link rel="icon" type="image/jpeg" href="https://ceewordcom.vercel.app/fevi.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="https://ceewordcom.vercel.app/fevi.jpg">
     <link rel="apple-touch-icon" href="https://ceewordcom.vercel.app/fevi.jpg">
-    <meta name="theme-color" content="#000000">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Premium Minimalist Dark Theme Styling -->
     <style>
-        :root {
-            --bg-primary: #ffffff;
-            --text-primary: #111827;
-            --text-secondary: #4b5563;
-            --accent: #000000;
-            --border: #e5e7eb;
-            --radius-lg: 1rem;
-            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-        }
         body {
-            font-family: var(--font-sans);
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
             margin: 0;
-            padding: 1.5rem;
+            padding: 0;
         }
-        .success-card {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 3rem;
-            max-width: 480px;
-            width: 100%;
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
             text-align: center;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
-            animation: fadeIn 0.6s ease;
+            border-bottom: 1px solid #222222;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
         }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        
-        .icon-wrapper {
-            width: 64px;
-            height: 64px;
-            background: #f0fdf4;
+
+        .logo {
+            max-width: 140px;
+            height: auto;
             border-radius: 50%;
+            margin-bottom: 15px;
+            border: 1px solid #333333;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .last-updated {
+            color: #888888;
+            font-size: 0.9rem;
+        }
+
+        .policy-nav {
             display: flex;
-            align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
+            gap: 20px;
+            margin-bottom: 30px;
         }
-        .icon-wrapper svg { color: #10b981; width: 32px; height: 32px; }
-        h1 { font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 600; }
-        p { color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; }
-        .code-box {
-            background: #f9fafb;
-            border: 1px dashed var(--border);
-            padding: 1rem;
-            border-radius: 0.5rem;
-            font-family: monospace;
-            font-size: 1.25rem;
+
+        .policy-nav a {
+            color: #3b82f6;
+            text-decoration: none;
             font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.05em;
+            transition: color 0.2s;
         }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.875rem 1.5rem;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 0.75rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            width: 100%;
+
+        .policy-nav a:hover {
+            color: #60a5fa;
+            text-decoration: underline;
         }
-        .btn:hover { background: #1f2937; transform: translateY(-1px); }
-        .footer-link {
-            display: block;
-            margin-top: 1.5rem;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.875rem;
+
+        section {
+            margin-bottom: 45px;
         }
-        .footer-link:hover { color: var(--text-primary); }
+
+        h2 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            border-left: 3px solid #3b82f6; 
+            padding-left: 12px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #e5e5e5;
+            margin-top: 30px;
+            margin-bottom: 12px;
+        }
+
+        p, li {
+            color: #b3b3b3;
+            font-size: 1.02rem;
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .critical-disclaimer {
+            background-color: #0c0000;
+            border: 1px solid #4a0f0f;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .critical-disclaimer h3 {
+            color: #ff4d4d;
+            margin-top: 0;
+        }
+
+        .critical-disclaimer p {
+            color: #ffcccc;
+            font-size: 0.98rem;
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #222222;
+            color: #555555;
+            font-size: 0.85rem;
+        }
     </style>
 </head>
 <body>
-    <div class="success-card">
-        <div class="icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-        </div>
-        <h1>Application Submitted Successfully</h1>
-        <p>Thank you for applying. Please save this code carefully. You will need it to check your application status.</p>
-        
-        <div class="code-box" id="appCodeDisplay">CW-XXXXXX</div>
-        
-        <p style="font-size: 0.9375rem;">We typically review applications within seven business days.</p>
-        
-        <a href="getstarted.html" class="btn">Check Status or Login</a>
-        <a href="index.html" class="footer-link">← Back to Home</a>
+
+    <div class="container">
+        <!-- Header Section with Logo -->
+        <header>
+            <img src="https://ceewordcom.vercel.app/fevi.jpg" alt="Ceeword AI Studio Logo" class="logo">
+            <h1>Legal Terms & Privacy Center</h1>
+            <p class="last-updated">Effective Date: July 2026</p>
+            <nav class="policy-nav">
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#privacy">Privacy Policy</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ==============================================
+                 TERMS AND CONDITIONS SECTION
+                 ============================================== -->
+            <section id="terms">
+                <h2>PART I: Terms and Conditions</h2>
+                
+                <p>Please read these Terms and Conditions ("Terms") carefully before using Ceeword AI Studio ("the Service", "the Platform", "We", "Us"). By accessing, registering, or running queries within our tool, you bind yourself contractually to these conditions.</p>
+
+                <div class="critical-disclaimer">
+                    <h3>STRICT LIMITATION OF LIABILITY</h3>
+                    <p>Ceeword AI Studio is NOT a law firm, does not employ attorneys, and does not provide legal representation. Every generated document, output, suggestion, clause, or paragraph produced by this tool is strictly for <strong>assistive drafting and educational purposes only</strong>. It is not, under any circumstances, a replacement for qualified legal professionals. Every output produced by this platform <strong>MUST be reviewed, corrected, and verified by a licensed specialist</strong> in your local jurisdiction prior to usage, filing, or signing.</p>
+                </div>
+
+                <h3>1. AI Capabilities, Errors, and Limitations</h3>
+                <p>By using this tool, you explicitly acknowledge that Large Language Models (LLMs) and Generative AI systems are subject to inherent limitations. Our system works by processing semantic prompts and matching syntactic patterns.</p>
+                <ul>
+                    <li><strong>No Factual Guarantee:</strong> The AI can and does occasionally output incorrect, out-of-date, or completely fabricated information (known as "hallucinations").</li>
+                    <li><strong>Jurisdictional Inaccuracies:</strong> Laws, regulations, and drafting rules vary drastically by municipality, country, state, and territory. The AI may generate templates that are invalid, unenforceable, or non-compliant in your specific locality.</li>
+                    <li><strong>Duty to Audit:</strong> The user retains the sole, non-delegable duty to review every single sentence of the generated output. We are not responsible for any grammatical, technical, or legal errors contained in any generated file.</li>
+                </ul>
+
+                <h3>2. Subscriptions, Fees, and Infrastructure Costs</h3>
+                <p>When you purchase a subscription or credits on Ceeword AI Studio, you are paying strictly for <strong>infrastructure access and high-performance server run-time</strong>.</p>
+                <ul>
+                    <li><strong>API and Server Maintenance:</strong> Generating large-scale, professional-grade drafts requires processing power over graphics processing units (GPUs), active API queries, and robust database upkeep. Your fees directly sustain this technical server overhead.</li>
+                    <li><strong>No Professional Fees Charged:</strong> Subscription pricing does not represent a fee for legal expertise, document guarantees, or professional work. You are paying for a processing utility, not a professional service or guaranteed outcome.</li>
+                    <li><strong>Refund Policy:</strong> Since computational resources are allocated dynamically upon generation, all recurring subscription charges and prepaid credits are final and non-refundable unless stated otherwise at our sole discretion.</li>
+                </ul>
+
+                <h3>3. Prohibited Activities</h3>
+                <p>You agree not to use Ceeword AI Studio to:</p>
+                <ul>
+                    <li>Generate documents for fraudulent, deceptive, or intentionally malicious schemes.</li>
+                    <li>Circumvent security systems, extract core system prompts, reverse engineer our application, or run scrapers to block our server infrastructure.</li>
+                    <li>Insert prompts that contain illegal material, highly sensitive PII (Personally Identifiable Information) of individuals without their explicit consent, or classified state secrets.</li>
+                </ul>
+
+                <h3>4. Absolute Limitation of Liability</h3>
+                <p>To the maximum extent permitted by law, Ceeword AI Studio and its founders, developers, and partners shall not be held liable for any direct, indirect, punitive, incidental, special, or consequential damages. This includes, but is not limited to, loss of business, lawsuit failures, court-ordered sanctions, contract breaches, or compliance failures arising out of the use of our generated documents.</p>
+            </section>
+
+            <!-- ==============================================
+                 PRIVACY POLICY SECTION (EXPANDED & DETAILED)
+                 ============================================== -->
+            <section id="privacy">
+                <h2>PART II: Detailed Privacy Policy</h2>
+                
+                <p>This Privacy Policy governs how Ceeword AI Studio ("we," "us," or "our") collects, stores, processes, and handles your information. Protecting your computational metadata, prompt inputs, and keeping our data processes transparent is fundamental to our development standards and your trust.</p>
+
+                <h3>1. Information We Collect</h3>
+                <p>We process specific categories of data to operate and improve the Service:</p>
+                <ul>
+                    <li><strong>Prompt Inputs & Draft Content:</strong> The text, labels, context, and specific instructions you input into our forms to generate professional documents, letters, or drafts.</li>
+                    <li><strong>Account & Billing Data:</strong> Email addresses, secure login tokens, and payment identifiers used during billing processes. Payment data is processed securely via encrypted third-party gateways (e.g., Stripe). We do not directly store full credit card numbers on our servers.</li>
+                    <li><strong>Technical Usage Logs:</strong> Your IP address, browser type, operating system, device identifiers, and access timestamps. This is utilized to detect malicious API exploits, prevent abuse, and optimize server loading speeds.</li>
+                    <li><strong>Communication Data:</strong> Records of your interactions with our support team, including feedback, bug reports, and email correspondence.</li>
+                </ul>
+
+                <h3>2. How We Use Your Information</h3>
+                <p>Your data is utilized strictly for the following purposes:</p>
+                <ul>
+                    <li><strong>Service Provision:</strong> To process your prompts, generate requested drafts, and maintain your user workspace and document history.</li>
+                    <li><strong>Service Improvement:</strong> To analyze aggregated, anonymized usage patterns to refine our AI models, reduce hallucination rates, and improve drafting accuracy.</li>
+                    <li><strong>Security & Compliance:</strong> To monitor for fraudulent activity, enforce our Terms and Conditions, and comply with applicable legal obligations.</li>
+                </ul>
+
+                <h3>3. AI Processing and Data Transmission</h3>
+                <p>To produce highly precise documents, your prompt inputs are securely transmitted to our backend infrastructure and may be processed by vetted third-party AI API providers (such as OpenAI, Anthropic, or specialized fine-tuned models).</p>
+                <ul>
+                    <li>We configure our data pipelines to minimize persistent storage of raw, user-generated content wherever technically feasible.</li>
+                    <li><strong>Crucial User Advisory:</strong> We strongly advise users <strong>not to submit highly sensitive real-world personal identifiers</strong> (such as government ID numbers, social security numbers, or active banking credentials) within draft prompts. Always use generic placeholders (e.g., "[Insert Client Name Here]" or "[XX-XX-XXXX]") to protect privacy.</li>
+                </ul>
+
+                <h3>4. Data Sharing and Third-Party Services</h3>
+                <p>We do not sell, rent, or trade your personal data to third parties for marketing purposes. We only share data with trusted service providers who assist in our operations, such as:</p>
+                <ul>
+                    <li><strong>Cloud Infrastructure Providers:</strong> (e.g., AWS, Vercel) for secure hosting and database management.</li>
+                    <li><strong>Payment Processors:</strong> To securely handle subscription billing and invoicing.</li>
+                    <li><strong>AI Model Providers:</strong> Under strict data processing agreements that prohibit them from using your specific inputs to train their public foundational models without explicit consent.</li>
+                </ul>
+
+                <h3>5. Data Security and Retention</h3>
+                <p>We implement industry-standard administrative, technical, and physical safeguards to protect your data. This includes AES-256 encryption for data at rest and TLS 1.3 encryption for data in transit. We retain your account data and generated drafts only for as long as your account is active, or as needed to provide the Service. Upon account deletion, we initiate a secure data purging process within 30 days, subject to legal retention requirements.</p>
+
+                <h3>6. Your Privacy Rights</h3>
+                <p>Depending on your jurisdiction (e.g., GDPR, CCPA), you may have the right to:</p>
+                <ul>
+                    <li>Request access to the personal data we hold about you.</li>
+                    <li>Request correction of inaccurate data or deletion of your account and associated drafts.</li>
+                    <li>Opt-out of non-essential marketing communications at any time via the unsubscribe link in our emails.</li>
+                </ul>
+                <p>To exercise these rights, please contact us at the email provided below.</p>
+
+                <h3>7. International Data Transfers</h3>
+                <p>Ceeword AI Studio operates globally. If you are accessing the Service from outside our primary hosting region, please be aware that your information may be transferred to, stored, and processed in countries that may have different data protection laws. We ensure appropriate safeguards, such as Standard Contractual Clauses (SCCs), are in place to protect your data.</p>
+
+                <h3>8. Children's Privacy</h3>
+                <p>Our Service is not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected data from a minor, we will take immediate steps to delete such information.</p>
+
+                <h3>9. Updates to This Policy</h3>
+                <p>As technology, AI capabilities, and global data protection laws evolve, we may occasionally update this Privacy Policy. The "Effective Date" at the top of this page will be revised accordingly. Continued usage of our system after changes are posted constitutes your acceptance of those revisions.</p>
+            </section>
+        </main>
+
+        <footer>
+            &copy; 2026 Ceeword AI Studio. All rights reserved. Registered for technical assistive utility only.
+        </footer>
     </div>
 
-    <script>
-        // Extract code from URL and display it
-        const urlParams = new URLSearchParams(window.location.search);
-        const code = urlParams.get('code');
-        if (code) {
-            document.getElementById('appCodeDisplay').textContent = code;
-        }
-    </script>
+    <!-- The main website script attached correctly here -->
+    <script src="main.js"></script>
 </body>
 </html>
