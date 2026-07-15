@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            color: #ffffff;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin: 0 0 5px 0;
+            color: #ffffff;
+        }
+        p.subtitle {
+            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 40px;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .card {
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+        }
+        .card h3 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: #000000;
+        }
+        .card .price {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #000000;
+        }
+        .card .price span {
+            font-size: 1rem;
+            font-weight: normal;
+            color: #333333;
+        }
+        .card .limit {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            color: #444444;
+            line-height: 1.4;
+        }
+        .card button {
+            background-color: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        .card button:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .tier-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #666666;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="ceewordcom.vercel.app/fevi.jpg" alt="Company Logo" class="logo">
+    
+    <h1>Subscription Plans</h1>
+    <h2>Membership Tiers</h2>
+    <p class="subtitle">
+        Choose Your Standing<br>
+        Three tiers of access, each finished in gold. Pick the allotment of documents that matches your ambition.
+    </p>
+    
+    <div class="container">
+        <!-- Tier I -->
+        <div class="card">
+            <div class="tier-label">Tier I</div>
+            <h3>Starter</h3>
+            <div class="price">$49 <span>per month</span></div>
+            <div class="limit">179 Documents monthly processing limit</div>
+            <button>Select Starter</button>
+        </div>
+        
+        <!-- Tier II -->
+        <div class="card">
+            <div class="tier-label">Tier II</div>
+            <h3>Professional</h3>
+            <div class="price">$69 <span>per month</span></div>
+            <div class="limit">412 Documents monthly processing limit</div>
+            <button>Select Professional</button>
+        </div>
+        
+        <!-- Tier III -->
+        <div class="card">
+            <div class="tier-label">Tier III</div>
+            <h3>Elite</h3>
+            <div class="price">$199 <span>per month</span></div>
+            <div class="limit">789 Documents monthly processing limit</div>
+            <button>Select Elite</button>
+        </div>
+    </div>
+
+</body>
+</html>
