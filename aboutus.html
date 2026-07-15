@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Ceeword</title>
+    <title>About Us | Ceeword - AI Documentation Tool</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,12 +24,12 @@
                         }
                     },
                     animation: {
-                        'fade-in-up': 'fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
                         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
                         fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
                         }
                     }
@@ -46,67 +46,39 @@
             -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Subtle ambient glow in the background */
         .ambient-glow {
             position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.06) 0%, rgba(0, 0, 0, 0) 70%);
             border-radius: 50%;
             pointer-events: none;
             z-index: 0;
         }
 
-        /* Premium glass-like borders for dark mode */
         .dark-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(10px);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         
         .dark-card:hover {
-            background: rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.05);
             border-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-4px);
+            transform: translateY(-2px);
         }
 
-        /* Image styling */
-        .hero-image-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .hero-image-container::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero-image {
-            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        .hero-image-container:hover .hero-image {
-            transform: scale(1.05);
-        }
-
-        /* Scroll reveal utility */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(25px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Text gradient for highlights */
         .text-gradient-glow {
             background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
             -webkit-background-clip: text;
@@ -119,171 +91,177 @@
 
     <!-- Ambient Background Glows -->
     <div class="ambient-glow top-0 left-1/4 animate-pulse-slow"></div>
-    <div class="ambient-glow bottom-0 right-1/4 animate-pulse-slow" style="animation-delay: 2s; background: radial-gradient(circle, rgba(139, 92, 246, 0.06) 0%, rgba(0, 0, 0, 0) 70%);"></div>
+    <div class="ambient-glow bottom-0 right-1/4 animate-pulse-slow" style="animation-delay: 2s; background: radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, rgba(0, 0, 0, 0) 70%);"></div>
 
-    <!-- Minimal Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-md border-b border-white/5 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="/" class="text-2xl font-bold tracking-tight text-white">ceeword</a>
-            <div class="hidden md:flex space-x-10 text-sm font-medium text-gray-400">
-                <a href="/" class="hover:text-white transition-colors duration-300">Home</a>
-                <a href="#mission" class="hover:text-white transition-colors duration-300">Mission</a>
-                <a href="#agentic" class="hover:text-white transition-colors duration-300">Agentic Flow</a>
-                <a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a>
+    <!-- Professional Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                    <a href="#about" class="hover:text-white transition-colors duration-300">About Us</a>
+                    <a href="#workflows" class="hover:text-white transition-colors duration-300">Workflows</a>
+                    <a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a>
+                </div>
             </div>
-            <a href="mailto:ceewordinternational@gmail.com" class="px-5 py-2.5 text-sm font-medium text-black bg-white rounded-full hover:bg-gray-200 transition-all duration-300">
+            <a href="mailto:ceewordinternational@gmail.com" class="px-4 py-2 text-sm font-medium text-black bg-white rounded-full hover:bg-gray-200 transition-all duration-300">
                 Get in Touch
             </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                
-                <!-- Text Content -->
-                <div class="reveal active order-2 lg:order-1">
-                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-gray-300 mb-8 tracking-wide uppercase">
-                        About Ceeword
-                    </div>
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-8">
-                        Architecting <br>
-                        <span class="text-gradient-glow">Autonomous Intelligence.</span>
-                    </h1>
-                    <p class="text-lg text-gray-400 leading-relaxed max-w-xl mb-10 font-light">
-                        We are a premier AI product studio based in Goa, India. We don't just build software; we engineer <span class="text-white font-medium">agentic workflows</span> that think, adapt, and execute complex tasks with unprecedented precision.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#agentic" class="px-8 py-4 text-base font-semibold text-black bg-white rounded-full hover:bg-gray-200 transition-all duration-300 text-center">
-                            Explore Our Technology
-                        </a>
-                        <a href="#contact" class="px-8 py-4 text-base font-semibold text-white border border-white/20 rounded-full hover:bg-white/5 transition-all duration-300 text-center">
-                            Connect with Us
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Image Content -->
-                <div class="reveal active order-1 lg:order-2" style="transition-delay: 200ms;">
-                    <div class="hero-image-container shadow-2xl shadow-white/5">
-                        <!-- Using the provided image URL. Added https:// for proper rendering -->
-                        <img src="https://ceewordcom.vercel.app/fevi.jpg" 
-                             alt="Ceeword Studio" 
-                             class="hero-image w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-700">
-                    </div>
-                    <div class="mt-6 flex items-center justify-between text-sm text-gray-500 px-2">
-                        <span>Ceeword Headquarters</span>
-                        <span>Goa, India</span>
-                    </div>
-                </div>
+    <!-- Compact Hero Section -->
+    <section id="about" class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="reveal active inline-flex items-center px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-gray-300 mb-6 tracking-wide uppercase">
+                About Ceeword
+            </div>
+            <h1 class="reveal active text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15] mb-6">
+                Intelligent Documentation, <br>
+                <span class="text-gradient-glow">Effortlessly Drafted.</span>
+            </h1>
+            <p class="reveal active text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto mb-10 font-light">
+                Ceeword is a professional AI documentation tool designed to generate, refine, and format drafts, letters, and official correspondence with unprecedented speed, accuracy, and professional tone.
+            </p>
+            <div class="reveal active flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#workflows" class="px-6 py-3 text-base font-semibold text-black bg-white rounded-full hover:bg-gray-200 transition-all duration-300">
+                    Explore Workflows
+                </a>
+                <a href="#contact" class="px-6 py-3 text-base font-semibold text-white border border-white/20 rounded-full hover:bg-white/5 transition-all duration-300">
+                    Contact Us
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Mission & Vision Section -->
-    <section id="mission" class="py-24 border-t border-white/5 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16">
-                <div class="reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
-                    <p class="text-gray-400 leading-relaxed text-lg font-light">
-                        To democratize advanced artificial intelligence by building intuitive, powerful, and ethically grounded AI products. We believe the future belongs to systems that augment human capability, not replace it.
-                    </p>
-                </div>
-                <div class="reveal" style="transition-delay: 150ms;">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
-                    <p class="text-gray-400 leading-relaxed text-lg font-light">
-                        A world where complex digital operations are handled seamlessly by autonomous agents, freeing human minds to focus on creativity, strategy, and innovation. Rooted in the serene, creative energy of Goa, we blend deep technical expertise with a mindful, human-centric approach.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Agentic Flow Section -->
-    <section id="agentic" class="py-32 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20 reveal">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">The Agentic Flow</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light">
-                    We move beyond static chatbots. Our architecture is built on dynamic, multi-agent systems.
+    <!-- Workflows Section -->
+    <section id="workflows" class="py-20 border-t border-white/5 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Workflows</h2>
+                <p class="text-gray-400 max-w-xl mx-auto text-base font-light">
+                    Streamlined processes designed to take your documentation from rough idea to final, polished draft in seconds.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-6">
                 <!-- Card 1 -->
-                <div class="dark-card rounded-2xl p-8 reveal">
-                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 border border-white/10">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                <div class="dark-card rounded-xl p-6 reveal">
+                    <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center mb-5 border border-white/10">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Autonomous Reasoning</h3>
+                    <h3 class="text-lg font-semibold text-white mb-2">Smart Drafting</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">
-                        Our agents don't just respond; they plan, reason, and break down complex, multi-step objectives into executable actions without human hand-holding.
+                        Transform brief prompts or bullet points into comprehensive, professionally structured letters, memos, and documents instantly.
                     </p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="dark-card rounded-2xl p-8 reveal" style="transition-delay: 150ms;">
-                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 border border-white/10">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                <div class="dark-card rounded-xl p-6 reveal" style="transition-delay: 100ms;">
+                    <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center mb-5 border border-white/10">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Seamless Integration</h3>
+                    <h3 class="text-lg font-semibold text-white mb-2">Context-Aware Refinement</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">
-                        Designed to plug directly into your existing tech stack. Our agentic flows interact with APIs, databases, and external tools fluidly and securely.
+                        Our AI adapts to your required tone, audience, and purpose, ensuring every document meets the highest professional standards.
                     </p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="dark-card rounded-2xl p-8 reveal" style="transition-delay: 300ms;">
-                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 border border-white/10">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <div class="dark-card rounded-xl p-6 reveal" style="transition-delay: 200ms;">
+                    <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center mb-5 border border-white/10">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Enterprise-Grade Security</h3>
+                    <h3 class="text-lg font-semibold text-white mb-2">Seamless Export</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">
-                        Built with privacy-first principles. Every agentic interaction is logged, auditable, and secured with bank-grade encryption protocols.
+                        One-click export to PDF, DOCX, or direct email. Designed to integrate smoothly into your existing professional routine.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Location & Contact Section -->
-    <section id="contact" class="py-24 border-t border-white/5 bg-dark-800">
-        <div class="max-w-4xl mx-auto px-6 text-center reveal">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Rooted in Goa. Building for the World.</h2>
-            <p class="text-gray-400 text-lg font-light mb-12 max-w-2xl mx-auto">
-                Operating from the vibrant, creative hub of Goa, India, we combine global technological standards with a unique, mindful perspective on product development.
+    <!-- Compact Details Section -->
+    <section class="py-20 border-t border-white/5 bg-dark-800">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">Built for Professionals</h2>
+                    <p class="text-gray-400 leading-relaxed text-base font-light mb-4">
+                        Ceeword was created to eliminate the friction of professional writing. Whether you are drafting client correspondence, internal memos, or formal letters, our tool ensures clarity, correctness, and the right tone every time.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed text-base font-light">
+                        Rooted in Goa, India, our team combines global technological standards with a meticulous, user-centric approach to document automation.
+                    </p>
+                </div>
+                <div class="reveal dark-card rounded-xl p-6" style="transition-delay: 150ms;">
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 border border-white/10">
+                                <span class="text-white font-semibold text-xs">01</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Rapid Generation</h4>
+                                <p class="text-gray-500 text-xs mt-1">Create first drafts in seconds, saving hours of manual formatting.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 border border-white/10">
+                                <span class="text-white font-semibold text-xs">02</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Enterprise Security</h4>
+                                <p class="text-gray-500 text-xs mt-1">Your drafts and sensitive data are protected with end-to-end encryption.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 border border-white/10">
+                                <span class="text-white font-semibold text-xs">03</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Custom Templates</h4>
+                                <p class="text-gray-500 text-xs mt-1">Save and reuse your organization's preferred formats and branding.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-6 text-center reveal">
+            <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+            <p class="text-gray-400 text-base font-light mb-10 max-w-xl mx-auto">
+                Have questions about integrating Ceeword into your daily workflow? We are here to help.
             </p>
             
-            <div class="dark-card rounded-2xl p-10 max-w-2xl mx-auto">
-                <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+            <div class="dark-card rounded-xl p-8 max-w-lg mx-auto">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-8">
                     <div class="text-center">
-                        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Location</p>
-                        <p class="text-xl font-medium text-white">Goa, India</p>
+                        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">Location</p>
+                        <p class="text-base font-medium text-white">Goa, India</p>
                     </div>
-                    <div class="hidden md:block w-px h-12 bg-white/10"></div>
+                    <div class="hidden md:block w-px h-8 bg-white/10"></div>
                     <div class="text-center">
-                        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Email</p>
-                        <a href="mailto:ceewordinternational@gmail.com" class="text-xl font-medium text-white hover:text-gray-300 transition-colors duration-300">
+                        <p class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">Email</p>
+                        <a href="mailto:ceewordinternational@gmail.com" class="text-base font-medium text-white hover:text-gray-300 transition-colors duration-300">
                             ceewordinternational@gmail.com
                         </a>
                     </div>
                 </div>
                 
-                <div class="mt-10 pt-8 border-t border-white/10">
-                    <a href="mailto:ceewordinternational@gmail.com" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-black bg-white rounded-full hover:bg-gray-200 transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)]">
-                        Start a Conversation
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
-                </div>
+                <a href="mailto:ceewordinternational@gmail.com" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-black bg-white rounded-full hover:bg-gray-200 transition-all duration-300 hover:shadow-[0_0_20px_-5px_rgba(255,255,255,0.3)]">
+                    Start a Conversation
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Minimal Footer -->
-    <footer class="py-12 border-t border-white/5 bg-black">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+    <footer class="py-10 border-t border-white/5 bg-black">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="text-sm text-gray-600">
                 &copy; 2026 Ceeword International. All rights reserved.
             </div>
