@@ -5,154 +5,223 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscription Plans</title>
     <style>
+        /* Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             background-color: #000000;
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 40px 20px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-        }
-        .logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            object-fit: cover;
-            border: 2px solid #ffffff;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin: 0 0 10px 0;
-            color: #ffffff;
-        }
-        h2 {
-            font-size: 1.8rem;
-            margin: 0 0 5px 0;
-            color: #ffffff;
-        }
-        p.subtitle {
-            font-size: 1.1rem;
-            color: #cccccc;
-            margin-bottom: 40px;
-            text-align: center;
-            max-width: 600px;
+            padding: 60px 20px;
             line-height: 1.5;
         }
+
+        /* Logo Styling */
+        .logo-container {
+            margin-bottom: 24px;
+        }
+
+        .logo {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffffff;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #a1a1aa;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: #71717a;
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 56px;
+            line-height: 1.6;
+        }
+
+        /* Card Container */
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 32px;
             width: 100%;
             max-width: 1200px;
         }
+
+        /* Card Styling */
         .card {
             background-color: #ffffff;
             color: #000000;
-            border: 2px solid #ffffff;
-            border-radius: 12px;
-            padding: 30px;
-            width: 300px;
+            border-radius: 20px;
+            padding: 40px 32px;
+            width: 100%;
+            max-width: 340px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.15);
         }
+
+        .tier-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #52525b;
+            margin-bottom: 12px;
+        }
+
         .card h3 {
-            font-size: 1.8rem;
-            margin: 10px 0;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
             color: #000000;
         }
-        .card .price {
-            font-size: 2.2rem;
-            font-weight: bold;
-            margin: 10px 0;
+
+        .price {
+            font-size: 2.75rem;
+            font-weight: 800;
             color: #000000;
+            margin: 16px 0;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
         }
-        .card .price span {
+
+        .price span {
             font-size: 1rem;
-            font-weight: normal;
-            color: #333333;
+            font-weight: 500;
+            color: #52525b;
+            margin-left: 6px;
         }
-        .card .limit {
+
+        .limit {
             font-size: 1rem;
-            margin-bottom: 25px;
-            color: #444444;
-            line-height: 1.4;
+            color: #3f3f46;
+            margin-bottom: 36px;
+            line-height: 1.5;
+            font-weight: 500;
         }
-        .card button {
+
+        /* Button Styling */
+        .button {
+            display: inline-block;
+            width: 100%;
+            padding: 16px 24px;
             background-color: #000000;
             color: #ffffff;
-            border: 2px solid #000000;
-            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: 700;
             font-size: 1rem;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+            border: 2px solid #000000;
+            text-align: center;
         }
-        .card button:hover {
+
+        .button:hover {
             background-color: #ffffff;
             color: #000000;
         }
-        .tier-label {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            color: #666666;
-            font-weight: bold;
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .card {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 
-    <img src="ceewordcom.vercel.app/fevi.jpg" alt="Company Logo" class="logo">
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <!-- Note: Added https:// for proper web rendering. If it's a local relative path, remove 'https://' -->
+        <img src="https://ceewordcom.vercel.app/fevi.jpg" alt="Company Logo" class="logo" onerror="this.src='ceewordcom.vercel.app/fevi.jpg'">
+    </div>
     
+    <!-- Header Section -->
     <h1>Subscription Plans</h1>
     <h2>Membership Tiers</h2>
     <p class="subtitle">
-        Choose Your Standing<br>
+        Choose Your Standing.<br>
         Three tiers of access, each finished in gold. Pick the allotment of documents that matches your ambition.
     </p>
     
+    <!-- Cards Container -->
     <div class="container">
-        <!-- Tier I -->
-        <div class="card">
+        
+        <!-- Tier I Card -->
+        <div class="card" onclick="window.location.href='getstarted.html';">
             <div class="tier-label">Tier I</div>
             <h3>Starter</h3>
             <div class="price">$49 <span>per month</span></div>
-            <div class="limit">179 Documents monthly processing limit</div>
-            <button>Select Starter</button>
+            <div class="limit">179 Documents<br>monthly processing limit</div>
+            <a href="getstarted.html" class="button">Select Starter</a>
         </div>
         
-        <!-- Tier II -->
-        <div class="card">
+        <!-- Tier II Card -->
+        <div class="card" onclick="window.location.href='getstarted.html';">
             <div class="tier-label">Tier II</div>
             <h3>Professional</h3>
             <div class="price">$69 <span>per month</span></div>
-            <div class="limit">412 Documents monthly processing limit</div>
-            <button>Select Professional</button>
+            <div class="limit">412 Documents<br>monthly processing limit</div>
+            <a href="getstarted.html" class="button">Select Professional</a>
         </div>
         
-        <!-- Tier III -->
-        <div class="card">
+        <!-- Tier III Card -->
+        <div class="card" onclick="window.location.href='getstarted.html';">
             <div class="tier-label">Tier III</div>
             <h3>Elite</h3>
             <div class="price">$199 <span>per month</span></div>
-            <div class="limit">789 Documents monthly processing limit</div>
-            <button>Select Elite</button>
+            <div class="limit">789 Documents<br>monthly processing limit</div>
+            <a href="getstarted.html" class="button">Select Elite</a>
         </div>
+
     </div>
 
 </body>
